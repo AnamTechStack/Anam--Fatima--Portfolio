@@ -1,0 +1,807 @@
+# MASTER PROMPT: BUILD AN ADVANCED, FULLY DYNAMIC FULL-STACK DEVELOPER PORTFOLIO
+
+## 1. YOUR ROLE
+
+Act as a senior full-stack software architect, expert UI/UX designer, frontend engineer, backend engineer, database architect, security engineer, SEO specialist, accessibility expert, and QA automation engineer.
+
+Your task is to design, build, test, and deliver a complete, production-oriented personal portfolio web application for:
+
+**Name:** Anam Fatima  
+**Professional Title:** Full Stack Developer | WordPress Developer | SEO Specialist  
+**Brand:** ATS — Anam Tech Stack  
+**Primary Goal:** Showcase professional skills, real projects, technical knowledge, development experience, and contact information to recruiters, internship evaluators, agencies, and potential clients.
+
+This must NOT be a static portfolio template, a single landing page, a UI mockup, or a frontend-only demo.
+
+Build a real, functional, database-connected, responsive full-stack application with a secure admin dashboard, working forms, content management, project management, persistent data, proper validation, and complete testing.
+
+Do not merely describe the implementation. Create the actual application and its working source files.
+
+## 2. NON-NEGOTIABLE DEVELOPMENT RULES
+
+1. Every important content section must be dynamic and database-driven.
+2. The public website must load its content from the backend rather than rely on hardcoded project arrays.
+3. Admin changes must persist after page reloads and appear on the public website without code edits.
+4. Every visible button, form, navigation link, filter, toggle, and action must perform its intended function.
+5. Implement real CRUD operations: Create, Read, Update, and Delete.
+6. Implement proper authentication and server-side authorization.
+7. Never expose private credentials, service-role keys, passwords, or secrets in client-side code.
+8. Use environment variables for external service credentials.
+9. Do not create fake API integrations, simulated analytics presented as real data, or decorative dashboard controls.
+10. Do not claim a feature works until its actual implementation has been tested.
+11. Do not silently replace a failing backend with mock data.
+12. Keep the architecture modular, maintainable, reusable, and documented.
+13. Preserve data when updating the application. Never delete existing data during a migration without explicit authorization.
+14. Do not stop after creating the homepage. Implement the complete application, all required routes, database schema, security policies, and testing.
+15. If credentials or external configuration are missing, build the integration correctly, document the required setup, and clearly identify what cannot yet be verified.
+
+## 3. TECHNOLOGY STACK
+
+Use the following preferred stack:
+
+- Frontend: React with TypeScript.
+- Build tool: Vite, if supported by the environment.
+- Styling: Tailwind CSS with reusable design tokens and custom CSS where necessary.
+- Routing: React Router.
+- Forms and validation: React Hook Form with Zod, or an equivalent type-safe solution.
+- Backend and database: Supabase PostgreSQL.
+- Authentication: Supabase Auth with a secure admin-only authorization model.
+- File uploads: Supabase Storage with appropriate access policies.
+- Server-side privileged operations: secure server endpoints or Supabase Edge Functions where appropriate.
+- Charts: a maintained charting library for real database-derived analytics.
+- Icons: Lucide icons.
+- Testing: unit tests, integration tests, and browser-based end-to-end tests where supported.
+
+If the environment cannot support this stack, explain the exact limitation and choose the closest maintainable alternative. Do not mix incompatible technologies or invent unavailable services.
+
+Create reusable API/service modules so the UI is not tightly coupled to database queries.
+
+Use a clear folder structure such as:
+
+src/
+  components/
+  layouts/
+  pages/
+  features/
+  hooks/
+  services/
+  lib/
+  types/
+  utils/
+  styles/
+  routes/
+
+Include database migrations, SQL policies, setup documentation, environment variable examples, and tests in the appropriate project folders.
+
+## 4. PREMIUM DESIGN SYSTEM
+
+Create an original, premium developer portfolio inspired by modern SaaS products and high-quality engineering portfolios.
+
+### Brand colors
+
+- Primary blue: #2563EB
+- Dark navy: #0F172A
+- Navy surface: #1E293B
+- Electric blue: #38BDF8
+- Cyan accent: #22D3EE
+- Purple accent: #7C3AED
+- Orange accent: #F97316
+- Light text: #F8FAFC
+- Secondary text: #CBD5E1
+- Border: a subtle translucent white or slate color.
+
+### Typography
+
+Use Poppins or Manrope for headings and Inter for body text. Use locally available fallback fonts if web fonts cannot load.
+
+### Visual requirements
+
+- Premium dark theme by default.
+- Optional light theme with a working theme toggle.
+- Glassmorphism used selectively, not excessively.
+- Subtle blue, cyan, and purple ambient gradients.
+- Clean spacing and consistent grid alignment.
+- Rounded cards with restrained shadows.
+- Professional project thumbnails and image treatments.
+- Smooth, accessible hover and focus states.
+- Subtle page transitions and scroll-reveal effects.
+- Reduced-motion support.
+- Clear typography hierarchy and excellent readability.
+- No excessive neon, distracting animations, or generic template appearance.
+- Use consistent spacing, radius, color, and typography tokens.
+
+Create reusable components for buttons, cards, inputs, modals, badges, alerts, loaders, empty states, and pagination.
+
+The design must look polished on both large desktop monitors and mobile devices.
+
+## 5. PUBLIC WEBSITE PAGES
+
+Implement the following routes and make them fully functional.
+
+### A. Home page
+
+Create a premium hero section containing:
+
+- Name: Anam Fatima.
+- Dynamic professional headline.
+- A short introduction.
+- Profile image managed through the admin dashboard.
+- Primary CTA: View My Projects.
+- Secondary CTA: Contact Me.
+- Optional downloadable CV button.
+- Animated availability badge controlled by admin settings.
+- Social media links controlled by the admin.
+- Subtle background gradient and developer-inspired visual elements.
+
+The hero headline, introduction, image, CTA labels, buttons, and social links must be editable from the dashboard.
+
+Add the following sections:
+
+1. Hero.
+2. Professional introduction.
+3. Skills overview.
+4. Featured projects.
+5. Services offered.
+6. Work process.
+7. Professional achievements and certifications.
+8. Testimonials, if genuine testimonials are available.
+9. Latest articles, if published articles exist.
+10. Contact CTA.
+11. Footer.
+
+Hide optional sections gracefully when they contain no published content. Never invent testimonials, employment history, client reviews, or achievements.
+
+### B. About page
+
+Include:
+
+- Professional biography.
+- Career goals.
+- Technical interests.
+- Development approach.
+- Experience timeline.
+- Education.
+- Certifications.
+- Skills overview.
+- Profile image.
+- Downloadable CV.
+
+All content must be editable through the admin dashboard.
+
+Do not invent dates, qualifications, employers, or credentials.
+
+### C. Projects portfolio
+
+Create a complete project gallery backed by the database.
+
+Each project must support:
+
+- Project title.
+- URL-friendly slug.
+- Short description.
+- Full description.
+- Featured image.
+- Multiple gallery images.
+- Project category.
+- Technology stack.
+- Project status.
+- Featured/unfeatured setting.
+- Publication status.
+- Completion date, if known.
+- Live demo URL.
+- Source code URL, if publicly available.
+- Project challenges.
+- Implementation details.
+- Key features.
+- SEO title and description.
+- Display order.
+
+Create:
+
+- Responsive project card grid.
+- Search by title or description.
+- Category filtering.
+- Technology filtering.
+- Featured projects section.
+- Pagination or efficient load-more behavior.
+- Project detail pages.
+- Related project suggestions.
+- Useful empty and loading states.
+
+Filters must work with real database data.
+
+Only published projects may appear publicly.
+
+### D. Individual project detail page
+
+Use a reusable dynamic route such as /projects/:slug.
+
+Display the project's title, gallery, description, technology badges, features, challenges, implementation details, and available links.
+
+Provide previous/next navigation or related projects when appropriate.
+
+Support unique page titles, meta descriptions, Open Graph metadata, and a sensible canonical URL.
+
+Return a proper not-found state for invalid or unpublished slugs.
+
+### E. Skills page
+
+Create an editable skills management system.
+
+Each skill should contain:
+
+- Name.
+- Category.
+- Description.
+- Optional proficiency level.
+- Optional years of experience, only if verified.
+- Icon or image.
+- Display order.
+- Visibility status.
+
+Suggested initial categories:
+
+- Frontend Development.
+- Backend Development.
+- WordPress Development.
+- Databases and APIs.
+- SEO.
+- Tools and Workflow.
+
+Potential skills to populate only when confirmed:
+
+HTML, CSS, JavaScript, responsive design, WordPress theme customization, plugin development, Elementor, PHP, REST APIs, database integration, technical SEO, Git, and debugging.
+
+Provide category tabs or filters and an optional skill search.
+
+Do not display fake animated percentages as measured expertise. If proficiency levels are used, make them transparent, editable self-assessments.
+
+### F. Services page
+
+Create dynamic service cards for services such as:
+
+- WordPress Website Development.
+- Custom WordPress Theme Development.
+- WordPress Plugin Development.
+- Responsive Website Design.
+- Website Maintenance.
+- On-Page SEO.
+- Technical SEO.
+- Website Performance Optimization.
+- API Integration and Automation.
+
+Each service must have an editable title, description, icon, features, optional starting price, CTA, publication status, and display order.
+
+Do not invent prices or claim services that the owner has not approved.
+
+### G. Resume and experience page
+
+Create a structured resume page with:
+
+- Professional summary.
+- Work experience.
+- Internship experience.
+- Education.
+- Skills.
+- Certifications.
+- Portfolio projects.
+- Downloadable PDF CV.
+
+Allow the owner to upload a new CV from the admin dashboard.
+
+Validate file type and size, store files securely, and ensure the public download link works.
+
+Provide a print-friendly resume layout.
+
+### H. Contact page
+
+Create a real contact form with:
+
+- Full name.
+- Email address.
+- Optional subject.
+- Message.
+- Consent checkbox where appropriate.
+- Server-side validation.
+- Helpful field-level errors.
+- Submission loading state.
+- Success and failure messages.
+- Spam protection and rate limiting.
+
+Save valid submissions to the database.
+
+Provide a private admin inbox where messages can be viewed, searched, marked read/unread, archived, and deleted.
+
+Notify the admin by email if an email provider has been configured.
+
+Do not pretend an email was sent when the provider is unavailable or the send operation fails.
+
+Protect against spam, repeated submissions, malicious input, and unauthorized access to contact messages.
+
+### I. Blog
+
+Implement an optional full blog system with:
+
+- Blog listing.
+- Individual article pages.
+- Categories and tags.
+- Search.
+- Pagination.
+- Featured image.
+- Rich-text content editor.
+- Draft, published, and scheduled status where supported.
+- Publication dates.
+- Author information.
+- SEO metadata.
+- Related articles.
+- Reading-time estimate calculated from content.
+- Social sharing links.
+
+Only published articles should be accessible publicly.
+
+Do not generate fabricated author credentials or claim that drafts have been published.
+
+### J. Testimonials and certifications
+
+Create separate database-driven modules.
+
+Testimonials must support the client's or reviewer's name, role, optional organization, quote, optional avatar, approval status, and display order.
+
+Certifications must support the title, issuer, issue date, optional credential ID, credential URL, image or PDF, and visibility.
+
+Only publish genuine testimonials and verified certifications approved by the owner.
+
+### K. Global header and footer
+
+Build a responsive header with:
+
+- ATS logo or text wordmark.
+- Home.
+- About.
+- Projects.
+- Skills.
+- Services.
+- Resume.
+- Blog.
+- Contact.
+- Theme toggle.
+- Mobile menu.
+- Optional contact CTA.
+
+Manage navigation labels, URLs, order, and visibility through the dashboard.
+
+Build a configurable footer with social links, copyright text, useful navigation, and contact information.
+
+Ensure the mobile menu opens, closes, navigates correctly, and supports keyboard interaction.
+
+## 6. SECURE ADMIN DASHBOARD
+
+Create a separate protected route such as /admin.
+
+The dashboard must be a real content management system, not a decorative mockup.
+
+### Authentication
+
+Implement:
+
+- Admin login.
+- Logout.
+- Session persistence using the authentication provider's supported secure mechanisms.
+- Password reset flow.
+- Protected admin routes.
+- Server-side authorization.
+- Admin role verification.
+- Unauthorized-access handling.
+
+Public registration must be disabled by default.
+
+Do not rely on hiding admin buttons or checking a role only in React. Enforce authorization in the backend and database policies.
+
+Never expose database service-role keys in the browser.
+
+### Dashboard overview
+
+Display real metrics derived from available data:
+
+- Total published projects.
+- Total draft projects.
+- Total contact messages.
+- Unread messages.
+- Total published blog posts.
+- Recent content updates.
+- Visitor and page-view metrics, if a real privacy-conscious analytics system is implemented.
+
+Include date filters where appropriate.
+
+If analytics are not configured, show a clear setup message rather than fake statistics.
+
+### Project manager
+
+Implement complete CRUD functionality.
+
+Admin must be able to:
+
+- Create projects.
+- Edit projects.
+- Delete projects with confirmation.
+- Upload and replace images.
+- Manage project galleries.
+- Select technologies and categories.
+- Preview projects.
+- Save drafts.
+- Publish and unpublish.
+- Feature and unfeature projects.
+- Change display order.
+- Edit SEO fields.
+
+Validate all required fields and show actionable errors.
+
+### Content management
+
+Create dedicated managers for:
+
+- Home page sections.
+- About content.
+- Skills.
+- Services.
+- Resume and experience.
+- Education.
+- Certifications.
+- Testimonials.
+- Blog posts.
+- Navigation.
+- Footer.
+- Social media links.
+- Contact information.
+- Site settings.
+
+Every supported update must persist to the database.
+
+### Media library
+
+Create an image and document management interface.
+
+Support:
+
+- File upload.
+- Image preview.
+- Alternative text.
+- File type and size validation.
+- Upload progress where supported.
+- Replace file.
+- Delete unused assets with confirmation.
+- Secure access policies.
+
+Validate uploads on the server or trusted storage layer. Do not trust filename extensions alone.
+
+### Contact inbox
+
+Implement:
+
+- Message list.
+- Search.
+- Read/unread status.
+- Message details.
+- Archive.
+- Delete with confirmation.
+- Date sorting.
+- Pagination.
+- Optional email notification status.
+
+Never expose private messages through public database queries or public API endpoints.
+
+### Site settings
+
+Provide an editable settings screen for:
+
+- Site name.
+- Logo.
+- Profile photo.
+- Professional headline.
+- Short introduction.
+- Email and public contact details.
+- Social media URLs.
+- Theme preferences.
+- SEO defaults.
+- CV file.
+- Footer text.
+- Availability status.
+- Analytics configuration.
+- Contact notification configuration.
+
+Validate URLs and inputs before saving.
+
+## 7. DATABASE ARCHITECTURE
+
+Design a normalized PostgreSQL schema with appropriate primary keys, foreign keys, indexes, timestamps, constraints, and relationships.
+
+Create tables or equivalent structures for:
+
+- admin_profiles or user roles.
+- site_settings.
+- page_content.
+- navigation_items.
+- projects.
+- project_images.
+- project_categories.
+- technologies.
+- project_technologies.
+- skills.
+- services.
+- experience.
+- education.
+- certifications.
+- testimonials.
+- blog_posts.
+- blog_categories.
+- blog_post_categories.
+- contact_messages.
+- media_assets.
+- analytics_events, only if analytics are implemented.
+
+Use a consistent ID strategy and suitable created_at and updated_at fields.
+
+Use unique slugs for projects and blog posts.
+
+Use database migrations so the schema can be reproduced reliably.
+
+Define the appropriate indexes for public listings, search, filtering, and chronological queries.
+
+Use transactions where multiple related records must be updated consistently.
+
+Define safe seed data for initial development. Clearly separate seed/demo data from real personal information.
+
+Provide an idempotent setup process where possible.
+
+Never require an existing production database to be dropped or recreated.
+
+## 8. SECURITY REQUIREMENTS
+
+Implement and test the following:
+
+- Database row-level security.
+- Least-privilege access.
+- Admin authorization enforced outside the frontend.
+- Input validation on both client and server.
+- Output encoding and safe rendering.
+- Protection against SQL injection through safe database APIs and parameterized operations.
+- XSS prevention.
+- CSRF protection where relevant to the authentication architecture.
+- Contact form rate limiting.
+- Spam prevention.
+- Secure file upload validation.
+- Private storage for sensitive files.
+- Public read access only to approved published content.
+- Safe error messages that do not reveal credentials or internal stack traces.
+- No secrets in source code or public environment variables.
+- No unrestricted public write access.
+- No publicly accessible admin messages.
+- Safe deletion and confirmation flows.
+
+Create and review the database access policies explicitly.
+
+Do not expose the database admin key to the frontend.
+
+Document the remaining deployment-specific security steps.
+
+## 9. RESPONSIVE DESIGN AND ACCESSIBILITY
+
+Support:
+
+- Mobile phones from approximately 320px wide.
+- Modern smartphones.
+- Tablets.
+- Laptops.
+- Large desktop screens.
+
+Requirements:
+
+- No unintended horizontal overflow.
+- Responsive navigation.
+- Readable typography.
+- Accessible contrast.
+- Semantic HTML.
+- Keyboard navigation.
+- Visible focus indicators.
+- Labels for form controls.
+- Meaningful alternative text.
+- Accessible modal behavior.
+- Reduced-motion support.
+- Appropriate loading and error announcements.
+- Touch-friendly interactive elements.
+
+Test the public website and dashboard at multiple viewport sizes.
+
+## 10. SEO AND PERFORMANCE
+
+Implement:
+
+- Unique page titles.
+- Meta descriptions.
+- Canonical URLs.
+- Open Graph metadata.
+- Social preview images.
+- Sitemap generation or a maintained sitemap route.
+- robots.txt configuration.
+- Structured data where appropriate.
+- Breadcrumbs for nested content.
+- Clean URLs.
+- Correct HTTP status handling.
+- Image optimization.
+- Lazy loading where appropriate.
+- Code splitting where useful.
+- Efficient database queries.
+- Caching where safe.
+- Pagination for large datasets.
+- Custom not-found pages.
+
+Do not index admin routes, private messages, unpublished drafts, or private files.
+
+Do not generate duplicate canonical URLs or claim a sitemap is deployed until the route has been verified.
+
+Aim for strong Core Web Vitals and accessible, performant pages. Measure performance instead of claiming arbitrary scores.
+
+## 11. REAL ANALYTICS
+
+If analytics are implemented, distinguish between:
+
+- Total page views.
+- Unique visitors, where reliably measurable.
+- Top pages.
+- Referrer sources.
+- Device categories.
+- Date-based trends.
+
+Use a documented event collection method, appropriate deduplication, database indexes, and retention rules.
+
+Respect applicable privacy and consent requirements.
+
+Do not collect unnecessary personal data.
+
+Do not label raw page views as unique visitors.
+
+If the analytics system is not configured, make that status explicit in the dashboard.
+
+## 12. ERROR HANDLING AND RELIABILITY
+
+Implement:
+
+- Reusable error boundaries.
+- Loading skeletons.
+- Empty states.
+- Network error messages.
+- Database error handling.
+- Upload error handling.
+- Authentication expiry handling.
+- Form submission feedback.
+- Retry controls for safe retryable operations.
+- Logging that excludes passwords, secrets, and sensitive message contents.
+
+Do not silently swallow errors.
+
+Prevent duplicate submissions where appropriate.
+
+Ensure asynchronous operations cannot leave the UI in a permanent loading state.
+
+Handle missing images, empty sections, invalid URLs, unavailable external services, and deleted content gracefully.
+
+## 13. TESTING REQUIREMENTS
+
+Create and execute a practical test suite.
+
+### Frontend tests
+
+Test reusable components, forms, filters, route handling, loading states, error states, and theme switching.
+
+### Backend and database tests
+
+Test database operations, authorization, validation, content publication rules, and storage policies.
+
+### End-to-end tests
+
+Verify the following user journeys:
+
+1. Public visitors can browse published pages and projects.
+2. Project search and filters return correct results.
+3. A valid contact form creates one database record.
+4. Invalid contact submissions are rejected.
+5. Unauthorized users cannot access the admin dashboard.
+6. Public visitors cannot create, edit, or delete projects.
+7. An authorized admin can create a project.
+8. The new project persists after reload.
+9. Publishing the project makes it appear on the public projects page.
+10. Editing the project updates its public details.
+11. Unpublishing a project removes it from public listings.
+12. Private contact messages remain inaccessible to public users.
+13. File uploads obey access and validation rules.
+14. Navigation and mobile menus work.
+15. Invalid project URLs show the correct not-found state.
+16. Theme settings and editable content persist as designed.
+
+Run available tests and build checks. Report the actual results, including failures. Never mark unexecuted tests as passed.
+
+## 14. DELIVERY REQUIREMENTS
+
+Deliver a complete, organized project containing:
+
+- All frontend source code.
+- All backend/server functions required by the architecture.
+- Database migrations.
+- Database security policies.
+- Authentication setup.
+- Storage setup.
+- Environment variable example file.
+- Dependency and build configuration.
+- Reusable UI components.
+- Public pages.
+- Admin dashboard.
+- Functional CRUD operations.
+- Validation and error handling.
+- Tests.
+- README with installation instructions.
+- Local development instructions.
+- Database setup instructions.
+- Admin account creation instructions.
+- Deployment instructions.
+- Backup and recovery recommendations.
+- Known limitations.
+
+Include a clear explanation of which services require separate accounts or credentials.
+
+Do not expose actual secret values in the README.
+
+## 15. IMPLEMENTATION WORKFLOW
+
+Follow this order:
+
+Phase 1: Inspect the available development environment and establish the application architecture.
+
+Phase 2: Create the design system, responsive layouts, routing, and reusable components.
+
+Phase 3: Implement the database schema, migrations, storage, and security policies.
+
+Phase 4: Implement authentication and protected admin routes.
+
+Phase 5: Build all public pages and database-driven content rendering.
+
+Phase 6: Build the admin dashboard and complete CRUD functionality.
+
+Phase 7: Implement contact forms, media uploads, SEO, and optional analytics.
+
+Phase 8: Add error handling, responsive refinements, accessibility, and performance optimization.
+
+Phase 9: Run tests, build checks, and the complete critical user journeys.
+
+Phase 10: Fix discovered errors, review security, and document setup and deployment.
+
+These phases are an implementation sequence, not permission to stop after producing a plan. Continue through the supported implementation work and clearly identify any external configuration that requires my input.
+
+## 16. FINAL ACCEPTANCE CRITERIA
+
+The application is ready for handoff only when:
+
+- The public portfolio renders correctly.
+- All required routes work.
+- The database connection works.
+- Admin authentication and authorization work.
+- Admin CRUD operations persist.
+- Project publishing and unpublishing work.
+- Contact messages are saved securely.
+- Responsive layouts are verified.
+- Build errors are resolved.
+- Critical automated tests have been executed.
+- Secrets are not exposed.
+- Setup instructions are complete.
+
+At completion, provide:
+
+1. A summary of implemented features.
+2. The actual technology stack.
+3. The database schema and security-policy summary.
+4. A list of environment variables that I must configure.
+5. Exact setup and run commands.
+6. Test results, including failed or skipped tests.
+7. Deployment steps.
+8. Any remaining limitations or manual setup requirements.
+
+Begin by inspecting the environment, then implement the application in a structured way. Prioritize working functionality, security, maintainability, and premium design over decorative effects or unnecessary complexity.
