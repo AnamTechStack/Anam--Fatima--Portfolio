@@ -644,6 +644,16 @@
   ],
   "contact_messages": [
     {
+      "id": "msg-qa-1792821553090",
+      "name": "QA Recruiter",
+      "email": "recruiter@enterprise.com",
+      "subject": "Senior Role Invitation",
+      "message": "Testing that contact message is persisted in database and visible in inbox.",
+      "isRead": false,
+      "isArchived": false,
+      "createdAt": "2026-10-24T05:59:13.090Z"
+    },
+    {
       "id": "msg-qa-1792820423099",
       "name": "QA Recruiter",
       "email": "recruiter@enterprise.com",
